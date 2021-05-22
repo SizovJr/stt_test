@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Speech to text</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='../static/styles/style.css') }}">
+</head>
+
+<body>
+	<div class="parent" id="result">
+		<div class="block">
+			<div class="play">
+				<button onclick="startConverting();"><img src="/static/styles/play-button.svg" alt="play"></button>
+			</div>
+			<div class="pause">
+				<button onclick="stopConverting();"><img src="/static/styles/pause.svg" alt="pause"></button>
+			</div>
+			<div class="text">
+				<textarea name="simpleText" id="result1" cols="80" rows="10" placeholder="Здесь появится ваш текст"></textarea>
+			</br>
+		</div>
+		<script src="{{ url_for('static', filename='../static/js/recorder.js') }}"></script>
+	</div>
+</body>
+
+</html>
